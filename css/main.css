@@ -30,6 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    height: var(--navbar-height);
 
     position: sticky;
     top: 0;
@@ -179,13 +180,13 @@ section img {
 }
 
 .section-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 1.5;
     text-align: justify;
 }
 
 .section-text > h2 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 /* ABOUT US*/
@@ -232,23 +233,30 @@ section img {
 
 .contact ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .contact ul > li {
-    margin: 10px 10px;
+    margin: 10px 0;
 }
 
 /* FOOTER */
 footer {
-    /* min-height: 100px; */
     text-align: center;
     font-size: 1.1rem;
     margin-top: 50px;
-    position: absolute;
-    bottom: 0;
 }
 
 @media (max-width: 1200px) {
+    .logo img {
+        height: 100px;
+    }
+
+    header {
+        height: 100px;
+    }
+
     .navbar {
         display: none;
     }
@@ -258,11 +266,12 @@ footer {
     }
     
     .home-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .home-subtitle {
         font-size: 1rem;
+        text-align: center;
     }
 
     .about-us, .contact {
@@ -270,7 +279,7 @@ footer {
     }
 
     section {
-        height: 300px;
+        height: 450px;
     }
     
     .section-text {
@@ -283,17 +292,20 @@ footer {
 
     .about-us-sm {
         display: block;
+        flex:1 1 0;
     }
 
     .about-us-sm > img {
         float: right;
-        padding: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
         height: 200px;
         width: auto;
     }
 
     .contact-sm {
         display: block;
+        flex:1 1 0;
     }
 
     .contact-sm ul {
@@ -302,8 +314,9 @@ footer {
 
     .contact-sm > img {
         float: left;
-        padding: 10px;
-        width: 300px;
+        /* width: 300px; */
+        width: 100%;
         height: auto;
+        margin-bottom: 10px;
     }
 }
