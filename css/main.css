@@ -1,0 +1,309 @@
+:root {
+    --navbar-height: 150px;
+    --home-img-height: 750px;
+    --section-img-height: 500px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Roboto", sans-serif;
+
+    position: relative;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+.logo {
+    flex: 2;
+}
+
+.logo img {
+    height: var(--navbar-height);
+}
+
+.navbar {
+    width: 60%;
+    flex: 5;
+}
+
+.nav {
+    height: var(--navbar-height);
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.nav a:active {
+    color: red;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.contact-button {
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+}
+
+.contact-button > button {
+    width: 170px;
+    height: 50px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.contact-button > button:hover {
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.contact-button > button:active {
+    background-color: red;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* HOME IMAGE */
+
+.home-img {
+    height: var(--home-img-height);
+    background-image: url("../img/Architecture_img1.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title {
+    font-size: 7rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.home-subtitle {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.home-project-btn {
+    margin-top: 50px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+}
+
+.home-project-btn a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+}
+
+.home-project-btn:hover {
+    background-color: #000;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.home-project-btn:active {
+    background-color: red;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* MAIN */
+
+main {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section img {
+    height: var(--section-img-height);
+    width: auto;
+}
+
+.section-text {
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.section-text > h2 {
+    font-size: 4rem;
+}
+
+/* ABOUT US*/
+.about-us-sm {
+    display: none;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.about-us > .section-img {
+    margin-left: 50px;
+}
+
+.about-us span {
+    display: block;
+
+}
+
+/* CONTACT*/
+.contact-sm {
+    display: none;
+}
+
+.contact {
+    display: flex;
+}
+
+.contact > .section-img {
+    margin-right: 50px;
+}
+
+.social {
+    display: flex;
+    margin-top: 10px;
+}
+
+.social > a {
+    color: #000;
+    margin-right: 20px;
+}
+
+.contact ul {
+    list-style: none;
+}
+
+.contact ul > li {
+    margin: 10px 10px;
+}
+
+/* FOOTER */
+footer {
+    /* min-height: 100px; */
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        display: none;
+    }
+
+    .home-img {
+        height: 600px;
+    }
+    
+    .home-title {
+        font-size: 2rem;
+    }
+    
+    .home-subtitle {
+        font-size: 1rem;
+    }
+
+    .about-us, .contact {
+        display: none;
+    }
+
+    section {
+        height: 300px;
+    }
+    
+    .section-text {
+        font-size: 1rem;
+    }
+    
+    .section-text > h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-us-sm {
+        display: block;
+    }
+
+    .about-us-sm > img {
+        float: right;
+        padding: 10px;
+        height: 200px;
+        width: auto;
+    }
+
+    .contact-sm {
+        display: block;
+    }
+
+    .contact-sm ul {
+        list-style: none;
+    }
+
+    .contact-sm > img {
+        float: left;
+        padding: 10px;
+        width: 300px;
+        height: auto;
+    }
+}
