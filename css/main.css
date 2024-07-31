@@ -1,3 +1,5 @@
+/* Michalis Koutrakis*/
+
 :root {
     --navbar-height: 150px;
     --home-img-height: 750px;
@@ -229,7 +231,7 @@ section img {
     float: right;
     padding-left: 10px;
     padding-bottom: 10px;
-    height: 200px;
+    height: 210px;
     width: auto;
 }
 
@@ -258,7 +260,7 @@ section img {
 
 .contact-sm > img {
     float: left;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     margin-bottom: 10px;
 }
@@ -300,7 +302,55 @@ footer {
     display: none;
 }
 
-@media (max-width: 1200px) {
+
+@media (min-width: 769px) and (max-width: 1350px) {
+    .about-us, .contact {
+        display: none;
+    }
+
+    .home-img {
+        height: 600px;
+    }
+    
+    .home-title {
+        font-size: 4rem;
+    }
+    
+    .home-subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    section {
+        height: 450px;
+    }
+    
+    .section-text {
+        font-size: 1.2rem;
+    }
+    
+    .section-text > h2 {
+        font-size: 2rem;
+    }
+
+    .about-us-sm > img {
+        height: 80%;
+        width: auto;
+        margin-left: 20px;
+    }
+
+    .contact-sm > img {
+        max-width: 60%;
+        margin-right: 20px;
+    }
+
+    .about-us-sm,
+    .contact-sm {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
     .logo {
         flex: none;
     }
@@ -312,6 +362,7 @@ footer {
     header {
         height: 100px;
         justify-content: space-evenly;
+        position: static;
     }
 
     .about-us, .contact {
