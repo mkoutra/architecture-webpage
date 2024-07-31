@@ -25,6 +25,7 @@
             <div class="logo">
                 <a href="#"><img src="../img/logo_small.jpeg" alt="Company logo"></a>
             </div>
+
             <div class="navbar roboto-light">
                 <ul class="nav">
                     <li><a href="">Home</a></li>
@@ -34,10 +35,26 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
+
             <div class="contact-button">
                 <button type="button" class="roboto-light">GET IN TOUCH</button>
             </div>
+
+            <div class="navbar-toggle-btn hidden">
+                <button type="button" id="navToggleBtn">&#8801</button>
+            </div>
+
         </header>
+
+        <div id="toggleMenu" class="navbar-toggle roboto-light hidden">
+            <ul class="nav">
+                <li><a href="">Home</a></li>
+                <li><a href="#aboutUs">About</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
 
         <div class="home-img">
             <div class="home-title roboto-medium">We Shape Your World</div>
@@ -65,7 +82,7 @@
                 </div>
             </section>
 
-            <section id="aboutUsSmall" class="about-us-sm">
+            <section id="aboutUsSmall" class="about-us-sm hidden">
                 <img src="../img/Architecture_img3.jpg">
                 <div class="section-text">
                     <h2 class="roboto-medium">ABOUT US</h2>
@@ -101,7 +118,7 @@
                 </div>
             </section>
 
-            <section id="contact-sm" class="contact-sm">
+            <section id="contact-sm" class="contact-sm hidden">
                 <img src="../img/Architecture_img2.jpg">
                 <h2 class="roboto-medium">CONTACT</h2>
                 <div class="section-text">
@@ -125,6 +142,8 @@
             <div class="copyright">&copy Michalis Koutrakis, 2024 </div>
         </footer>
     </div>
+
+    <script src="../js/main.js"></script>
 </body>
 
 </html>

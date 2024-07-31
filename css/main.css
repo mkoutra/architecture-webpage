@@ -45,6 +45,8 @@ header {
     height: var(--navbar-height);
 }
 
+/* Navbar */
+
 .navbar {
     width: 60%;
     flex: 5;
@@ -76,6 +78,45 @@ header {
     text-decoration: underline;
 }
 
+/* Toggle */
+.navbar-toggle-btn {
+    width: 50px;
+    text-align: center;
+}
+
+.navbar-toggle-btn > button {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.navbar-toggle .nav{
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 230px;
+    margin: 10px 0;
+}
+
+.navbar-toggle a {
+    display: block;
+}
+
+.navbar-toggle .nav > li {
+    margin-top: 10px;
+}
+
+/* Contact button */
+
 .contact-button {
     height: var(--navbar-height);
     display: flex;
@@ -92,6 +133,8 @@ header {
     border: 1px solid black;
 }
 
+.home-project-btn:hover,
+.navbar-toggle-btn > button:hover,
 .contact-button > button:hover {
     background-color: #000;
     color: #fff;
@@ -99,6 +142,8 @@ header {
     cursor: pointer;
 }
 
+.home-project-btn:active,
+.navbar-toggle-btn > button:active,
 .contact-button > button:active {
     background-color: red;
     color: #fff;
@@ -106,7 +151,7 @@ header {
     cursor: pointer;
 }
 
-/* HOME IMAGE */
+/* HOME */
 
 .home-img {
     height: var(--home-img-height);
@@ -148,20 +193,6 @@ header {
     font-size: 1.1rem;
 }
 
-.home-project-btn:hover {
-    background-color: #000;
-    color: #fff;
-    font-weight: 400;
-    cursor: pointer;
-}
-
-.home-project-btn:active {
-    background-color: red;
-    color: #fff;
-    font-weight: 400;
-    cursor: pointer;
-}
-
 /* MAIN */
 
 main {
@@ -191,7 +222,15 @@ section img {
 
 /* ABOUT US*/
 .about-us-sm {
-    display: none;
+    flex:1 1 0;
+}
+
+.about-us-sm > img {
+    float: right;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    height: 200px;
+    width: auto;
 }
 
 .about-us {
@@ -205,12 +244,23 @@ section img {
 
 .about-us span {
     display: block;
-
 }
 
 /* CONTACT*/
+
 .contact-sm {
-    display: none;
+    flex:1 1 0;
+}
+
+.contact-sm ul {
+    list-style: none;
+}
+
+.contact-sm > img {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .contact {
@@ -233,8 +283,6 @@ section img {
 
 .contact ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .contact ul > li {
@@ -248,13 +296,36 @@ footer {
     margin-top: 50px;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 1200px) {
+    .logo {
+        flex: none;
+    }
+
     .logo img {
         height: 100px;
     }
 
     header {
         height: 100px;
+        justify-content: space-evenly;
+    }
+
+    .about-us, .contact {
+        display: none;
+    }
+
+    .contact-button {
+        height: 100px;
+        width: 100px;
+        flex: none;
+    }
+
+    .navbar-toggle-btn {
+        display: block;
     }
 
     .navbar {
@@ -274,10 +345,6 @@ footer {
         text-align: center;
     }
 
-    .about-us, .contact {
-        display: none;
-    }
-
     section {
         height: 450px;
     }
@@ -290,33 +357,8 @@ footer {
         font-size: 1.5rem;
     }
 
-    .about-us-sm {
-        display: block;
-        flex:1 1 0;
-    }
-
-    .about-us-sm > img {
-        float: right;
-        padding-left: 10px;
-        padding-bottom: 10px;
-        height: 200px;
-        width: auto;
-    }
-
+    .about-us-sm,
     .contact-sm {
         display: block;
-        flex:1 1 0;
-    }
-
-    .contact-sm ul {
-        list-style: none;
-    }
-
-    .contact-sm > img {
-        float: left;
-        /* width: 300px; */
-        width: 100%;
-        height: auto;
-        margin-bottom: 10px;
     }
 }
